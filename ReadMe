@@ -1,0 +1,24 @@
+ Translates an email written in a detected language to English and generates a summary.
+
+    Args:
+        email (str): The email to be processed and translated.
+
+    Returns:
+        dict: A dictionary containing the following keys:
+            - 'language': The language the email was written in.
+            - 'translated_email': The translated version of the email in English.
+            - 'summary': A short summary of the translated email.
+
+    Raises:
+        Exception: If any error occurs during the LLM chain execution.
+
+    Example:
+        email = "Hola, ¿cómo estás? Espero que todo vaya bien."
+        result = translate_and_summarize(email)
+        print(result)
+        # Output:
+        # {
+        #     'language': 'Spanish',
+        #     'translated_email': 'Hello, how are you? I hope everything is going well.',
+        #     'summary': 'A friendly greeting and a wish for well-being.'
+        # }
